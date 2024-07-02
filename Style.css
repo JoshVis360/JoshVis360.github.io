@@ -13,6 +13,7 @@ body {
 }
 main {
     margin-top: 56px;
+    background-image:url(https://i.imgur.com/QFsf3vo.jpeg) !important;
 }
 
 
@@ -26,7 +27,6 @@ main {
 }
 .nav-link:hover {
     color: #0f0f0f;
-    /* border-bottom: 3px solid #61223b; */
 }
 a.nav-link {
     border-bottom: 3px solid #61223b;
@@ -43,7 +43,7 @@ a.nav-link {
 
 /* MAIN CONTENT */
 .container {
-    height: 500px; /* adjust this value as needed */
+    height: 500px;
 }
 .text-centered {
     text-align: center;
