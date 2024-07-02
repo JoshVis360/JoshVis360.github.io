@@ -1,38 +1,85 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Email PHP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Visser CV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
-
 </head>
-
 <body>
-<div class="container">
-    <h1>Contact me</h1><br>
-    <p>Feel free to contact us and we will get back to you as soon as possible</p><br>
 
-<form action="mail.php" method="post">
-
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email">
-
-    <label for="subject">Subject:</label>
-    <input type="text" name="subject" id="subject">
-    <label for="message">Message</label>
-    <textarea name="message" cols="30" rows="10"></textarea>
-
-    <input type="submit" value="Send">
-
-</form>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+    <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#about">About</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#contact">Contact</a>
+</li>
+</ul>
 </div>
+</nav>
+
+<main>
+    <h1 class="text-centered">Joshua Visser</h1>
+    <p class="text-centered">Welcome to my CV!</p>
+
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-12">
+<div class="card" style="width: 18rem;">
+    <img src="Images/Educational.png" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 col-sm-12">
+<div class="card" style="width: 18rem;border:none">
+    <img src="Images/Joshua Visser.png" alt="Profile picture of Joshua Visser" class="CV-image">
+</div>
+</div>
+
+<div class="col-md-4 col-sm-12">
+<div class="card" style="width: 18rem;">
+    <img src="Images/Programming.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<p class="card-text">
+    <h3>StellieTech</h3>
+    <p>Introduction to HTML and CSS</p>
+    <p>2022</p>
+ <br>
+    <h3>HyperionDev</h3>
+    <p>Introduction to Full stack developer</p>
+    <p>2023</p>
+<br>
+    <h3>Moodle Academy</h3>
+    <p>Moodle Certification</p>
+    <p>2022</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="footer fixed-bottom bg-light py-3">
+<div class="container-fluid text-center text-muted">&copy; 2024 Joshua Visser
+    <a href="https://www.linkedin.com/in/joshua-visser-3a7598a5/" target="_blank"><i class="fa fa-linkedin"></i></a>
+</div>
+</footer>
+<!-- jQuery and Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
