@@ -9,7 +9,7 @@
 body {
     text-align: center;
     font-family: raleway;
-    background-image:url(https://i.imgur.com/qPGM8Ol.jpeg);
+    background-image:url(https://i.imgur.com/qPGM8Ol.jpeg) !important;
 }
 main {
     margin-top: 56px;
