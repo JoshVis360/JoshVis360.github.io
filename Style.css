@@ -9,23 +9,14 @@
 body {
     text-align: center;
     font-family: raleway;
-    background-image:url(https://i.imgur.com/ULutiNM.png);
+    background-image:url(Images/Background.png);
     background-size: cover;
 }
 main {
     margin-top: 56px;
 }
 
-
 /* Nav-bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
-    margin-bottom:10px;
-}
 .nav-link:hover {
     color: #0f0f0f;
 }
@@ -37,9 +28,7 @@ main {
 
 
 /* MAIN CONTENT */
-.container {
-    height: 500px;
-}
+
 .text-centered {
     text-align: center;
     margin-right:auto;
@@ -60,6 +49,9 @@ main {
     background: #f8f9fa;
 }
 
+.copyright{
+    color:white;
+}
 
 .footer .linkedin-link {
     margin-left: auto;
