@@ -9,11 +9,11 @@
 body {
     text-align: center;
     font-family: raleway;
-    background-image:url(https://i.imgur.com/qPGM8Ol.jpeg) !important;
+    background-image:url(https://i.imgur.com/ULutiNM.png);
+    background-size: cover;
 }
 main {
     margin-top: 56px;
-    background-image:url(https://i.imgur.com/QFsf3vo.jpeg) !important;
 }
 
 
