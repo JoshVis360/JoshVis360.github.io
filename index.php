@@ -1,29 +1,31 @@
 <!-- This page contains a form that allows users to input data. -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Data</title>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS file -->
 </head>
 <body>
-    <h1>Enter Data</h1>
-    <form action="store.php" method="POST">
-        <label for="closed">All Requests Closed:</label>
-        <input type="number" id="closed" name="closed" required><br>
+    <h1>Results</h1>
+    <?php
+    // Start the session to retrieve stored data
+    session_start();
 
-        <label for="current">All Current Requests Received:</label>
-        <input type="number" id="current" name="current" required><br>
+    // Check if results are available in session
+    if (isset($_SESSION['results'])) {
+        echo "<ul>";
+        foreach ($_SESSION['results'] as $result) {
+            echo "<li>" . htmlspecialchars($result) . "</li>"; // Display results securely
+        }
+        echo "</ul>";
+    } else {
+        echo "<p>No results available. Please enter some data.</p>";
+    }
+    ?>
 
-        <label for="quizzes">Quizzes Set Up:</label>
-        <input type="number" id="quizzes" name="quizzes" required><br>
-
-        <label for="modules">Modules Set Up:</label>
-        <input type="number" id="modules" name="modules" required><br>
-
-        <button type="submit">Submit</button>
-    </form>
+    <a href="input.php">Go to Input Page</a>
 </body>
 </html>
