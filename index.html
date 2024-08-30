@@ -15,58 +15,59 @@ if (file_exists($dataFile)) {
 }
 ?>
 
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Data Display</title>
     <style>
-        .table-custom {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 15px;
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        .table-custom td, .table-custom th {
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            background-color: #f8f9fa;
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
             text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="my-4">Requests Summary</h1>
-        <table class="table-custom">
+    <h1>Request Data</h1>
+    <table>
+        <thead>
             <tr>
-                <th>All Requests Received</th>
+                <th>Request Type</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>All Requests</td>
                 <td><?php echo $data['all_requests']; ?></td>
             </tr>
             <tr>
-                <th>Current Open Requests</th>
+                <td>Open Requests</td>
                 <td><?php echo $data['open_requests']; ?></td>
             </tr>
             <tr>
-                <th>Quiz Requests</th>
+                <td>Quiz Requests</td>
                 <td><?php echo $data['quiz_requests']; ?></td>
             </tr>
             <tr>
-                <th>Module Setup Requests</th>
+                <td>Module Setup Requests</td>
                 <td><?php echo $data['module_setup_requests']; ?></td>
             </tr>
             <tr>
-                <th>Enrollment Requests</th>
+                <td>Enrollment Requests</td>
                 <td><?php echo $data['enrollment_requests']; ?></td>
             </tr>
-        </table>
-        <a href="input.php" class="btn btn-primary mt-4">Add New Data</a>
-    </div>
+        </tbody>
+    </table>
 </body>
 </html>
-
-
