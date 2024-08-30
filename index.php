@@ -1,6 +1,4 @@
 <!-- index.php: Displays the data from data.txt and provides a link to the input page. -->
-
-
 <?php
 $dataFile = 'data.json';
 
