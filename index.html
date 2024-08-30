@@ -1,3 +1,20 @@
+<?php
+$dataFile = 'data.json';
+
+// Fetch data from the JSON file
+$data = [
+    'all_requests' => 0,
+    'open_requests' => 0,
+    'quiz_requests' => 0,
+    'module_setup_requests' => 0,
+    'enrollment_requests' => 0
+];
+
+if (file_exists($dataFile)) {
+    $data = json_decode(file_get_contents($dataFile), true);
+}
+?>
+
 !<!DOCTYPE html>
 <html lang="en">
 <head>
