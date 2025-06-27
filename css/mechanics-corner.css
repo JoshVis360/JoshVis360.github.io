@@ -1,0 +1,66 @@
+/*==Machanics corner Page styles==*/
+
+/*Main content area styling*/
+.mechanic-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+/*Car care tips section with background image*/
+.car-care-tips {
+  background-image: url('../images/mechanicscorner/mechanic-banner.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin:0 auto;
+  padding: 50px 0;
+}
+/*Section title styling*/
+.section-title {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 1px 20px rgb(0 0 0);
+  background: #f30909;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 5px solid #000000;
+}
+/*Car tips list styling*/
+.car-tips-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top:10px;
+}
+/*Individual car tip item styling*/
+.car-tips-list li {
+  background-color: #ffffff;
+  border-left: 5px solid red;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+/*Hover effect for car tip items*/
+.car-tips-list li:hover {
+  transform: translateY(-3px);
+}
+/*Strong text within car tips*/
+.car-tips-list strong {
+  color: #343a40;
+}
+/*Font Awesome solid icon styling*/
+.fa-solid{
+  padding-right:5px;
+  color: red;
+  font-size:20px;
+}
+/*Car icon styling*/
+.car-icon{
+  font-size: 30px;
+}
+
+/*===End of Code===*/

@@ -1,73 +1,171 @@
-<?php
-$dataFile = 'data.json';
-
-// Fetch data from the JSON file
-$data = [
-    'all_requests' => 0,
-    'open_requests' => 0,
-    'quiz_requests' => 0,
-    'module_setup_requests' => 0,
-    'enrollment_requests' => 0
-];
-
-if (file_exists($dataFile)) {
-    $data = json_decode(file_get_contents($dataFile), true);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Display</title>
-    <style>
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SA Car Scene Central | Tuning, Parts, & Hot Rides</title>
+  <meta name="author" content="SA Car Scene Central">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Favicon-->
+  <link rel="icon" href="images/logos/Logo.ico" type="image/x-icon">
+  <!--Preconnect to external font providers-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Google Fonts stylesheet-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!--External CSS libraries (Bootstrap + FontAwesome)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/4c71a9aeb9.css" crossorigin="anonymous">
+  <!--custom CSS-->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    <h1>Request Data</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Request Type</th>
-                <th>Count</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>All Requests</td>
-                <td><?php echo $data['all_requests']; ?></td>
-            </tr>
-            <tr>
-                <td>Open Requests</td>
-                <td><?php echo $data['open_requests']; ?></td>
-            </tr>
-            <tr>
-                <td>Quiz Requests</td>
-                <td><?php echo $data['quiz_requests']; ?></td>
-            </tr>
-            <tr>
-                <td>Module Setup Requests</td>
-                <td><?php echo $data['module_setup_requests']; ?></td>
-            </tr>
-            <tr>
-                <td>Enrollment Requests</td>
-                <td><?php echo $data['enrollment_requests']; ?></td>
-            </tr>
-        </tbody>
-    </table>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg">
+<!--Logo-->
+<a class="navbar-brand" href="index.html">
+  <img src="images/logos/Logo.png" class="site-logo" alt="SCSC-Logo">
+</a>
+<!--Toggler for mobile-->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<!--Navigation links -->
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+  <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="tuners-corner.html">Tuners Corner</a></li>
+  <li class="nav-item"><a class="nav-link" href="mechanics-corner.html">Mechanic&rsquo;s Corner</a></li>
+  <li class="nav-item"><a class="nav-link" href="rev-and-shine-sa-builds.html">Rev & Shine - SA Builds</a></li>
+</ul>
+</div>
+</nav>
+
+<!--Main page-->
+<main>
+<!--Hero Section-->
+<section class="hero-section">
+<div class="introduction-section">
+<div class="intro-content text-center">
+  <h1>Welcome to SA Car Scene Central</h1>
+<div class="introduction">
+  <p>Whether you're after
+  <span class="highlight">high-performance parts, trusted mechanics, expert tuning,</span>or just want to admire some seriously epic rides — 
+  <span class="highlight">you're in the right place.</span></p>
+</div>
+</div>
+</div>
+</section>
+
+<!--Image Carousel-->
+<div class="banner-image">
+<div class="carousel-wrapper">
+<div id="carouselSlide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="15000">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<!--First Image-->
+  <img src="images/homepage/homepage-S1.jpg" class="d-block w-100" alt="Picture of a Mk7 GTI">
+</div>
+<!--Image 2-->
+<div class="carousel-item">
+  <img src="images/homepage/homepage-S2.jpg" class="d-block w-100" alt="Picture of a Modified Engine">
+</div>
+<!--Image 3-->
+<div class="carousel-item">
+  <img src="images/homepage/homepage-S3.jpg" class="d-block w-100" alt="Picture of a Lamborghini">
+</div>
+<!--Image 4-->
+<div class="carousel-item">
+  <img src="images/homepage/homepage-S4.jpg" class="d-block w-100" alt="Picture of a BMW meeting">
+</div>
+<!--Image 5-->
+<div class="carousel-item">
+  <img src="images/homepage/homepage-S5.jpg" class="d-block w-100" alt="Picture of a Mk1 Citigolf">
+</div>
+</div>
+<!--Navigation indicators-->
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="4" aria-label="Slide 5"></button>
+</div>
+</div>
+<!--Navigation buttons-->
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselSlide" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselSlide" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+
+<!--About us-->
+<section class="about-us-section">
+<div class="about-us container text-center">
+  <h2 class="text-center mb-4 highlight">About Us</h2>
+  <p class="lead">SA Car Scene Central (SCSC) is your ultimate pit stop for everything car culture in South Africa.
+  <br>Born from a deep love for horsepower, clean builds, and local legends, SCSC is a community-driven platform dedicated to showcasing the best of South Africas car scene.</p>
+  <p class="lead">From expert tuning guides and trusted mechanic advice to a spotlight on jaw-dropping builds and performance upgrades</p>
+  <p class="highlight passion">we’re here to fuel your passion.</p>
+  <p class="lead">Whether you're a seasoned tuner, a weekend warrior, or just someone who appreciates a well-built ride, you'll find your lane here.
+  We connect you to the parts, people, and inspiration that drive SA's custom and performance car culture forward.</p>
+  <p class="fw-bold highlight passion">Built by enthusiasts, for enthusiasts - Welcome to the scene</p>
+</div>
+</section>
+</main>
+
+<!--Footer-->
+<footer class="footer-table">
+<div class="footer-wrapper">
+<!--Column 1: Brand-->
+<div class="footer-col">
+  <img src="images/logos/Logo.png" class="footer-logo" alt="SCSC Logo">
+  <p class="tagline">Fueled by Passion.<br>Tuned for Performance.</p>
+</div>
+<!--Column 2: Navigation-->
+<div class="footer-col">
+  <h3>Explore</h3>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="tuners-corner.html">Tuners Corner</a></li>
+  <li><a href="mechanics-corner.html">Mechanic's Corner</a></li>
+  <li><a href="rev-and-shine-sa-builds.html">Rev & Shine: SA Builds</a></li>
+</ul>
+</div>
+<!--Column 3: Contact-->
+<div class="footer-col">
+  <h3>Contact</h3>
+<table>
+  <tr><td>Phone:</td><td><a href="tel:0218984894">021 898 4894</a></td></tr>
+  <tr><td>Email:</td><td><a href="mailto:info@carfanaticssa.co.za">info@carfanaticssa.co.za</a></td></tr>
+  <tr><td>Location:</td><td>Cape Town, SA</td></tr>
+</table>
+</div>
+<!--Column 4: Social-->
+<div class="footer-col">
+  <h3>Follow Us</h3>
+<div class="social-icons">
+  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook"><i class="fa-brands fa-facebook"></i></a>
+  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Youtube"><i class="fa-brands fa-youtube"></i></a>
+</div>
+</div>
+</div>
+<!--Copyright-->
+<div class="footer-bottom">
+  <p>&copy; 2025 SA Car Scene Central. All rights reserved.</p>
+</div>
+</footer>
+
+<!-- Bootstrap 5.3 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

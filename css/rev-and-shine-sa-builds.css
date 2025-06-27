@@ -1,0 +1,96 @@
+/*===Rev & Shine Page Styles===*/
+/*Image gallery hero section*/
+.image-gallery {
+  background: url('../images/Rev&Shine/background-image/rev-shine-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+/*Container for gallery cards*/
+.cards {
+  display: flex;
+  gap: 30px;
+}
+/*Styling for card buttons*/
+.card-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 30px 40px;
+  font-size: 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  border:2px solid #ffffff;
+  transition: color 0.3s, border-color 0.3s;
+}
+/*Hover effects for card buttons*/
+.card-button:hover {
+  color: #ffffff;
+  border-color: #f80000;
+  text-shadow: 7px 13px 20px #ffffff;
+  box-shadow: 0 0 3px 2px #f80000;
+}
+/*Main gallery container*/
+.gallery {
+  display: none;
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 50px;
+}
+/*Gallery display on target*/
+.gallery:target {
+  display: block;
+}
+/*Slides container*/
+.slides {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+/*Hide radio inputs for slides*/
+.slides input {
+  display: none;
+}
+/*Individual slide image styling*/
+.slide-img {
+  display: none;
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+/*Display active slide based on checked input*/
+#slide1:checked ~ .s1,#slide2:checked ~ .s2,#slide3:checked ~ .s3,#slide4:checked ~ .s4,#slide5:checked ~ .s5,
+#slide6:checked ~ .s6,#slide7:checked ~ .s7,#slide8:checked ~ .s8,#slide9:checked ~ .s9,#slide10:checked ~ .s10,
+#slide11:checked ~ .s11,#slide12:checked ~ .s12,#slide13:checked ~ .s13,#slide14:checked ~ .s14,#slide15:checked ~ .s15 {
+  display: block;
+}
+/*Navigation dots/labels container*/
+.nav {
+  margin-top: 10px;
+}
+/*Styling for navigation labels*/
+.nav label {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/*Back link styling*/
+.back-link {
+  color: #ffffff;
+  margin-top: 20px;
+  display: inline-block;
+  background: #FFFFFF1A;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+}

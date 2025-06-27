@@ -1,0 +1,108 @@
+/*===Tuners Corner Page Styles===*/
+#tuners-corner{
+  background-image: url(../images/tunerscorner/Tuner-page-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*Tuner shop container*/
+.tuner-shops{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+  text-align: center;
+}
+/*Shop header(subtitle-underline)*/
+.shop-card-header{
+  padding: 10px;
+  border-bottom: 5px solid #ff0000;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  background-image: url('../images/tunerscorner/shop-header.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+/*Grid Layout-Tunershops*/
+.shop-grid-top {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+/*Grid Layout-Customize shops*/
+.shop-grid-bottom {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+/*Shop Card*/
+.shop-card {
+  background: white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 13px 20px 2px #000000;
+  transition: transform 0.2s ease;
+}
+/*Shop Card (hover)*/
+.shop-card:hover {
+  transform: translateY(-4px);
+}
+/*Shop Card (image)*/
+.shop-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+/*Shop Card (image-black background required)*/
+.card-image-black{
+  background-color: #000000;
+}
+/*Shop content(Inside)*/
+.shop-content {
+  padding: 1rem;
+  text-align: center;
+  margin:0 auto;
+  max-width: 300px;
+  height: 200px;
+}
+/*Shop content(Heading)*/
+.shop-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+/*Shop content(Footer)*/
+.shop-card-footer{
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+}
+/*Shop content(Footer-Button)*/
+.card-footer-button{
+  margin-top: 0.75rem;
+  margin-bottom:5px;
+  text-decoration: none;
+  color: white;
+  background: #ff4d4d;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: 0.2s;
+  align-items: baseline;
+}
+/*Shop content(Footer-Hover)*/
+.card-footer-button:hover {
+  background: white;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+/*===End of code===*/
+
+
+

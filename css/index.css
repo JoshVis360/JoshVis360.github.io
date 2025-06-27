@@ -1,0 +1,80 @@
+/*===Index Page Styles===*/
+
+/*Introduction section*/
+.introduction-section{
+  color:#ffffff;
+  background-color: #000000;
+  font-weight: 600;
+  margin-top: 50px;
+  padding: 40px;
+}
+/*Introduction content*/
+.introduction p {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+/*Attention text*/
+.highlight {
+  color: #ff3c00;
+  font-weight: 600;
+}
+/*Passion text*/
+.passion{
+  font-size: 1.2rem;
+}
+/*Banner image*/
+.banner-image{
+  display: block;
+  margin: 0 auto;
+}
+/*carousel item*/
+.carousel-item {
+  margin: 0 auto;
+  height: 100%;
+  max-height: 71vh;
+  overflow: hidden;
+  transition: none !important;
+}
+/*carousel image */
+.carousel-item img {
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.carousel-control-prev,.carousel-control-next {
+  top:200px !important;
+}
+/*Black background between image loading*/
+.carousel,.carousel-inner,.carousel-item {
+  background-color: #000;
+}
+/*About us*/
+.about-us-section{
+  margin-top: 10px;
+  padding: 20px 40px;
+}
+
+/*==Media Queries==*/
+@media (max-width: 768px) {
+/*Adjust padding for smaller screen (Into)*/
+  .introduction-section {
+  padding: 20px 15px;
+}
+/*Adjust font size for smaller screen (Into)*/
+  .introduction p {
+  font-size: 1.2rem;
+}
+/*Hide carousel icons and controls*/
+  .carousel-control-prev-icon,.carousel-control-next-icon,.carousel-indicators {
+  display: none !important;
+}
+/*Adjust font size for smaller screen (About us)*/
+  .about-us p {
+  font-size: 1rem;
+}
+}
+
+
+/*===End of code===*/

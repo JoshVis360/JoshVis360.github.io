@@ -1,0 +1,535 @@
+/*===Main Styles (Global)===*/
+
+/*==Normalize==*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*==Global Styles==*/
+* {
+  font-family: "Noto Sans", serif;
+}
+/*html&Body fixed*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/*==Layout==*/
+/*Body*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+/*Main*/
+main {
+  flex: 1 0 auto;
+}
+
+/*==NAVIGATION MENU==*/
+/*Navbar container*/
+.navbar {
+  width:100%;
+  z-index:1000;
+  background-color:#ffffff !important;
+  position: fixed !important;
+}
+/*Logo inside navbar*/
+.site-logo {
+  max-height: 30px;
+  width: auto;
+  padding:5px;
+}
+/*Nav links*/
+.nav-link {
+  color:#1A1A1A !important;
+  text-decoration: none;
+}
+/*nav link (Active)*/
+.nav-link.active {
+  color:#1A1A1A;
+  text-decoration: none;
+  border-bottom:3px solid #FF4D4D !important;
+}
+/*Hovered nav link*/
+.nav-link:hover {
+  color:#FF4D4D !important;
+}
+/*Active + hover nav link*/
+.nav-link.active:hover {
+  color:#FF4D4D !important;
+}
+
+/*==HEADER==*/
+/*Site header section*/
+.site-header {
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #f80000;
+  background-color: #000000;
+  margin: 60px 0 0 0;
+}
+/*Main title in header*/
+.site-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color:#f80000;
+}
+/*Subtitle in header*/
+.subtitle {
+  color:#ffffff;
+}
+/*Utility class to center text*/
+.text-center {
+  text-align: center;
+}
+
+
+/*==FOOTER==*/
+/*Footer container*/
+.footer-table {
+  background-color: #111;
+  color: #ddd;
+  font-family: 'Outfit', sans-serif;
+  padding: 48px 16px 16px;
+}
+/*Footer content wrapper*/
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  border-bottom: 1px solid #333;
+  padding-bottom: 32px;
+}
+/*Footer section titles*/
+.footer-col h3 {
+  color: #ff4d4d;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+/*Footer logo*/
+.footer-logo {
+  max-width: 120px;
+  margin-bottom: 16px;
+  filter: brightness(90%);
+}
+/*Footer tagline*/
+.tagline {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+/*Footer nav list*/
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.footer-col ul li a:hover {
+  color: #ff4d4d;
+}
+/*Contact info table*/
+.footer-col table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+.footer-col table td {
+  padding: 4px 6px;
+  vertical-align: top;
+}
+/*Social Icons*/
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 1.6rem;
+  color:#f50000;
+}
+.social-icons a:hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+/*Footer Bottom*/
+.footer-bottom {
+  color: #777;
+  text-align: center;
+  padding-top: 16px;
+  font-size: 0.8rem;
+  user-select: none;
+}
+
+
+/*==RESPONSIVE STYLES==*/
+@media (max-width: 768px) {
+/*Active nav link*/
+.nav-link.active{
+  border-bottom:none !important;
+}
+}
+
+
+/*===Index Page Styles===*/
+
+/*Introduction section*/
+.introduction-section{
+  color:#ffffff;
+  background-color: #000000;
+  font-weight: 600;
+  margin-top: 50px;
+  padding: 40px;
+}
+/*Introduction content*/
+.introduction p {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+/*Attention text*/
+.highlight {
+  color: #ff3c00;
+  font-weight: 600;
+}
+/*Passion text*/
+.passion{
+  font-size: 1.2rem;
+}
+/*Banner image*/
+.banner-image{
+  display: block;
+  margin: 0 auto;
+}
+/*carousel item*/
+.carousel-item {
+  margin: 0 auto;
+  height: 100%;
+  max-height: 71vh;
+  overflow: hidden;
+  transition: none !important;
+}
+/*carousel image */
+.carousel-item img {
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.carousel-control-prev,.carousel-control-next {
+  top:200px !important;
+}
+/*Black background between image loading*/
+.carousel,.carousel-inner,.carousel-item {
+  background-color: #000;
+}
+/*About us*/
+.about-us-section{
+  margin-top: 10px;
+  padding: 20px 40px;
+}
+
+/*==Media Queries==*/
+@media (max-width: 768px) {
+/*Adjust padding for smaller screen (Into)*/
+  .introduction-section {
+  padding: 20px 15px;
+}
+/*Adjust font size for smaller screen (Into)*/
+  .introduction p {
+  font-size: 1.2rem;
+}
+/*Hide carousel icons and controls*/
+  .carousel-control-prev-icon,.carousel-control-next-icon,.carousel-indicators {
+  display: none !important;
+}
+/*Adjust font size for smaller screen (About us)*/
+  .about-us p {
+  font-size: 1rem;
+}
+}
+
+
+/*===Tuners Corner Page Styles===*/
+
+#tuners-corner{
+  background-image: url(../images/tunerscorner/Tuner-page-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/*Tuner shop container*/
+.tuner-shops{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+  text-align: center;
+}
+/*Shop header(subtitle-underline)*/
+.shop-card-header{
+  padding: 10px;
+  border-bottom: 5px solid #ff0000;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  background-image: url('../images/tunerscorner/shop-header.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+/*Grid Layout-Tunershops*/
+.shop-grid-top {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+/*Grid Layout-Customize shops*/
+.shop-grid-bottom {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+/*Shop Card*/
+.shop-card {
+  background: white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 13px 20px 2px #000000;
+  transition: transform 0.2s ease;
+}
+/*Shop Card (hover)*/
+.shop-card:hover {
+  transform: translateY(-4px);
+}
+/*Shop Card (image)*/
+.shop-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+/*Shop Card (image-black background required)*/
+.card-image-black{
+  background-color: #000000;
+}
+/*Shop content(Inside)*/
+.shop-content {
+  padding: 1rem;
+  text-align: center;
+  margin:0 auto;
+  max-width: 300px;
+  height: 200px;
+}
+/*Shop content(Heading)*/
+.shop-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+/*Shop content(Footer)*/
+.shop-card-footer{
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+}
+/*Shop content(Footer-Button)*/
+.card-footer-button{
+  margin-top: 0.75rem;
+  margin-bottom:5px;
+  text-decoration: none;
+  color: white;
+  background: #ff4d4d;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: 0.2s;
+  align-items: baseline;
+}
+/*Shop content(Footer-Hover)*/
+.card-footer-button:hover {
+  background: white;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+
+/*==Machanics corner Page styles==*/
+
+/*Main content area styling*/
+.mechanic-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+/*Car care tips section with background image*/
+.car-care-tips {
+  background-image: url('../images/mechanicscorner/mechanic-banner.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin:0 auto;
+  padding: 50px 0;
+}
+/*Section title styling*/
+.section-title {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 1px 20px rgb(0 0 0);
+  background: #f30909;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 5px solid #000000;
+}
+/*Car tips list styling*/
+.car-tips-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top:10px;
+}
+/*Individual car tip item styling*/
+.car-tips-list li {
+  background-color: #ffffff;
+  border-left: 5px solid red;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+/*Hover effect for car tip items*/
+.car-tips-list li:hover {
+  transform: translateY(-3px);
+}
+/*Strong text within car tips*/
+.car-tips-list strong {
+  color: #343a40;
+}
+/*Font Awesome solid icon styling*/
+.fa-solid{
+  padding-right:5px;
+  color: red;
+  font-size:20px;
+}
+/*Car icon styling*/
+.car-icon{
+  font-size: 30px;
+}
+
+
+/*===Rev & Shine Page Styles===*/
+
+/*Image gallery hero section*/
+.image-gallery {
+  background: url('../images/Rev&Shine/background-image/rev-shine-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+/*Container for gallery cards*/
+.cards {
+  display: flex;
+  gap: 30px;
+}
+/*Styling for card buttons*/
+.card-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 30px 40px;
+  font-size: 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  border:2px solid #ffffff;
+  transition: color 0.3s, border-color 0.3s;
+}
+/*Hover effects for card buttons*/
+.card-button:hover {
+  color: #ffffff;
+  border-color: #f80000;
+  text-shadow: 7px 13px 20px #ffffff;
+  box-shadow: 0 0 3px 2px #f80000;
+}
+/*Main gallery container*/
+.gallery {
+  display: none;
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 50px;
+}
+/*Gallery display on target*/
+.gallery:target {
+  display: block;
+}
+/*Slides container*/
+.slides {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+/*Hide radio inputs for slides*/
+.slides input {
+  display: none;
+}
+/*Individual slide image styling*/
+.slide-img {
+  display: none;
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+/*Display active slide based on checked input*/
+#slide1:checked ~ .s1,#slide2:checked ~ .s2,#slide3:checked ~ .s3,#slide4:checked ~ .s4,#slide5:checked ~ .s5,
+#slide6:checked ~ .s6,#slide7:checked ~ .s7,#slide8:checked ~ .s8,#slide9:checked ~ .s9,#slide10:checked ~ .s10,
+#slide11:checked ~ .s11,#slide12:checked ~ .s12,#slide13:checked ~ .s13,#slide14:checked ~ .s14,#slide15:checked ~ .s15 {
+  display: block;
+}
+/*Navigation dots/labels container*/
+.nav {
+  margin-top: 10px;
+}
+/*Styling for navigation labels*/
+.nav label {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/*Back link styling*/
+.back-link {
+  color: #ffffff;
+  margin-top: 20px;
+  display: inline-block;
+  background: #FFFFFF1A;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+
+/*===End of Code===*/
+
+
+
