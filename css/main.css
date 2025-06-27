@@ -91,7 +91,7 @@ main {
 /*Footer container*/
 .footer-table {
   background-color: #111;
-  color: #ddd;
+  color: #ffffff;
   font-family: 'Outfit', sans-serif;
   padding: 48px 16px 16px;
 }
@@ -123,7 +123,7 @@ main {
 .tagline {
   font-style: italic;
   font-size: 0.9rem;
-  color: #bbb;
+  color: #ffffff;
 }
 /*Footer nav list*/
 .footer-col ul {
@@ -134,7 +134,7 @@ main {
   margin-bottom: 8px;
 }
 .footer-col ul li a {
-  color: #ddd;
+  color: #ffffff;
   text-decoration: none;
   transition: 0.2s ease;
 }
