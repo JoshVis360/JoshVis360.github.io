@@ -150,6 +150,15 @@ main {
   padding: 4px 6px;
   vertical-align: top;
 }
+/*contact(a)*/
+a.contact {
+  color: #ffffff;
+}
+/*Hover contact(a)*/
+a.contact:hover {
+  color: red;
+}
+
 /*Social Icons*/
 .social-icons a {
   margin-right: 10px;
